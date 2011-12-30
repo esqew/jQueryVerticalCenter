@@ -11,6 +11,7 @@
  *
  * Revisions:
  *		1.0		- Initial commit
+ *		1.0.1	- Removed extra code initially inserted by accident, added instructions for supporting dynamic window resizes
  * 
  * References:
  *		http://www.learningjquery.com/2007/10/a-plugin-development-pattern
@@ -19,19 +20,23 @@
  * Usage:
  *		$("p").vAlign();
  *
+ * Dynamic Resizing Usage (buggy, if you know how to fix please fork & pull req me):
+ *		$(window).resize(function() {
+ *			$("p").vAlign();
+ * 		}
+ *
+ *
  */
 (function($) {
 
     $.fn.vAlign = function() {
 		// iterate over matched elements
-        return this.each(function() {
-       		return this.each(function(i){
-				var ah = $(this).height();
-				var ph = $(this).parent().height();
-				var mh = Math.ceil((ph-ah) / 2);
-				$(this).css('margin-top', mh);
-			});
-        });
+   		return this.each(function(i){
+			var ah = $(this).height();
+			var ph = $(this).parent().height();
+			var mh = Math.ceil((ph-ah) / 2);
+			$(this).css('margin-top', mh);
+		});
     };
 
 })(jQuery);
