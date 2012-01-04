@@ -20,11 +20,12 @@
  * Usage:
  *		$("p").vAlign();
  *
- * Dynamic Resizing Usage (buggy, if you know how to fix please fork & pull req me):
+ * Dynamic Resizing Usage (buggy, if you know how to fix please fork & request a pull):
  *		$(window).resize(function() {
  *			$("p").vAlign();
  * 		}
- *
+ * Demo:
+ * 	http://www.esqew.com/seecrit
  *
  */
 (function($) {
