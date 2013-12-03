@@ -4,4 +4,4 @@ A project to dynamically center HTML elements vertically using the jQuery librar
 
 Usage
 --------------------
-  $("p").vAlign();
+    $("p").vAlign();
